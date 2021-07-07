@@ -1,0 +1,6 @@
+memo
+
+https://www.php.net/manual/ja/function.next.php
+
+https://www.php.net/manual/ja/function.prev.php
+
