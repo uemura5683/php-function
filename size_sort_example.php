@@ -193,3 +193,17 @@ Array (
 )
 
 */
+
+/*
+
+結合
+https://qiita.com/yukibe/items/242e55a9a69a4a7fa3db
+
+連想配列で要素を削除 unset関数
+https://pisuke-code.com/php-delete-element-in-foreach/
+https://techacademy.jp/magazine/12288
+
+並び替え
+https://snome.jp/programming/php-intro-8/
+
+*/
