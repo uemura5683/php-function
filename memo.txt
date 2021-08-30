@@ -68,3 +68,7 @@ DateTime Classは各年月日時分秒を、それぞれ個別の変数を使っ
 
 「strtotime」を全て「DateTime」に切り替えて解決。
 
+/**
+* laravelplayground　ツール
+**/
+https://laravelplayground.com/#/
