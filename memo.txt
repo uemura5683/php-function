@@ -1,5 +1,65 @@
 memo
 
-prev next
+/**
+* prev next
+**/ 
 https://www.php.net/manual/ja/function.next.php
 https://www.php.net/manual/ja/function.prev.php
+
+/**
+* 最強のLaravel開発環境をDockerを使って構築する
+**/
+https://qiita.com/ucan-lab/items/5fc1281cd8076c8ac9f4
+
+/**
+* カレンダーアプリの作成 Laravel基礎 教科書
+**/
+https://note.com/laravelstudy/n/nea15c1191987
+
+/**
+* symfony で始める php フレームワーク
+**/
+https://codezine.jp/article/detail/704
+
+/**
+* 2038年問題を華麗に解決！　エンジニアの仕事
+**/
+https://www.zenken.co.jp/blog/engineer/26593
+
+-> 「strtotime(※)」と「date(※)」というメソッドを使っている。
+
+※strtotime
+日付フォーマットの文字列をunixtime（コンピュータシステム上の時間表現）に変換する
+
+※date
+unixtimeを、指定した日付フォーマットの文字列に変換する
+
+PHPのstrtotimeだと、2038年1月以降は1970年1月1日に戻ってしまう。
+
+-----
+
+この2038年問題は、プログラムを作成するときunixtimeに64bit定数を使うだけで解決できます。
+実際64bitのPHPはUnixTimeが64Bitになっているのが確認できます。
+
+問題が起きたメンバーのPCは、64bitのWindowsだったのですが、
+開発には32bitのPHPしか入っていないXAMPP（開発環境）をつかっていて、unixtimeが32 bitになってしまっていました。
+
+開発環境上では気持ち悪いですが、本番環境のサーバでは64bitになるので問題ありません。
+我慢することで解決にしましょう。
+
+クロスプラットフォーム対応（仕様が全く異なるシステム上で、同じ仕様のものを動かすことができるようにすること）を実施します。
+
+PHPは5.2以上のバージョンから「DateTime Class」を提供しています。
+
+DateTime Classは各年月日時分秒を、それぞれ個別の変数を使って保存するので、
+32bitの環境でも2038年以上のDate表現ができます。
+
+それだけでなく、
+
+・Timestampを使わなくても日付の加減及び比較が簡単にできる
+・タイムゾーン変更が簡単にできる
+
+メソッドを提供しています。より簡単に日付データが処理できます。
+
+「strtotime」を全て「DateTime」に切り替えて解決。
+
