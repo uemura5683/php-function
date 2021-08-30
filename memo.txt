@@ -26,6 +26,11 @@ https://codezine.jp/article/detail/704
 **/
 https://www.zenken.co.jp/blog/engineer/26593
 
+/**
+* PHPのcURLでAPIやWebサイトへのアクセス方法。file_get_contentsとの比較
+**/
+https://blog.s-giken.net/440.html
+
 -> 「strtotime(※)」と「date(※)」というメソッドを使っている。
 
 ※strtotime
