@@ -32,3 +32,8 @@ Route::get('/prev_next', function()
 {
     return view('prev_next');
 });
+
+Route::get('/switch_empty_bool', function()
+{
+    return view('switch_empty_bool.blade');
+});
